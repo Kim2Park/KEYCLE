@@ -21,8 +21,6 @@ app_name = "kiosk"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('User.urls')),
     path('', include('Stat.urls')),
-    path('', include('QR.urls')),
     path('', include('qrcodeChange.urls')),
 ]
