@@ -24,4 +24,5 @@ urlpatterns = [
     path('', include('User.urls')),
     path('', include('Stat.urls')),
     path('', include('QR.urls')),
+    path('', include('qrcodeChange.urls')),
 ]
