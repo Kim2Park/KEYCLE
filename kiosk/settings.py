@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-ly8+yv5ga&)xk5rja#78dk*e4*+#ekv!5#1j01t=g6m_)2(ejw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['3.39.192.245']
 
 
 # Application definition
@@ -40,13 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'corsheaders',
     'pandas',
     'matplotlib',
     'Stat',
     'qrcodeChange',
     'corsheaders',#cors관련
-
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True # <- 모든 호스트 허용
