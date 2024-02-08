@@ -43,9 +43,6 @@ INSTALLED_APPS = [
     'corsheaders',
     'pandas',
     'matplotlib',
-    # 'qr_code',
-    'QR',
-    'User',
     'Stat',
     'qrcodeChange',
     'corsheaders',#cors관련
