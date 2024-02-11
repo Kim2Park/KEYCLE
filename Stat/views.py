@@ -30,19 +30,19 @@ def correctRateUpdate(request):
         return JsonResponse({"message" : "success"}, status=200)
     return JsonResponse({"message" : "success"}, status=403)
 
-# 문제별 정답률
+# 문제별 오답률
 @api_view(['GET'])
 def correctRate(request):
     if request.method == 'GET':
-        dominator = Stat.objects.get(id=6).total
         lastNumber = 6
+        dominator = Stat.objects.get(id=lastNumber).total
         list = []
         for i in range(1, lastNumber):
             if (dominator == 0):
                 list.append(0)
                 continue
             molecule = Stat.objects.get(id = i)
-            list.append(round((molecule.total / dominator * 100)))
+            list.append(round((1 - molecule.total / dominator * 100)))
         return  JsonResponse({"list" : list}, status=200)
     return JsonResponse({"message" : "fail"}, status=403)
 
