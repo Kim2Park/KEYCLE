@@ -1,5 +1,5 @@
 """
-WSGI config for kiosk project.
+WSGI config for KEYCLE project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
